@@ -45,11 +45,22 @@ function zoom(){
 }
 
 
-
 //4. McDonalds
 /*Create a variable name menuItems and assign it an array of three of your favorite items at McDonald's.
 
 Next, create a function named valueMenu that will display your favorite items in the paragraph the the id of `menu` after clicking on the showMenu paragraph.*/
+
+var menuItems = ["cheeseburger", "fries", "caramel frappe"];
+console.log(menuItems);
+
+function valueMenu(){
+	for(var i = 0; i < menuItems.length; i++){
+		console.log(menuItems[i]);
+		var menuBox = document.createElement("p");
+		menuBox.innerHTML = menuItems[i];
+		menu.appendChild(menuBox);
+	}
+}
 
 
 //5. Gin.
