@@ -115,4 +115,14 @@ console.log(randomQuotes);
 /*Create an event listener that will show and hide the message when clickig on the button.
 */
 
+showHide.addEventListener("click", hideShow);
 
+function hideShow(){
+	   var secret = document.getElementById("showmoney");
+    if (secret.style.display === "none") {
+        secret.style.display = "block";
+    } else {
+        secret.style.display = "none";
+    }
+
+}
