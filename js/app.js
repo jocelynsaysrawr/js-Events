@@ -6,7 +6,7 @@ The function will add the following content inside the paragraph with the id of 
 
 var bacon = "Shoulder turducken brisket, kevin swine andouille tri-tip salami tail ham sausage pork loin. Ribeye short loin rump kielbasa pork. Capicola short loin turducken corned beef tongue, chuck leberkas salami frankfurter. Kielbasa fatback pancetta, ground round meatball turducken jowl ribeye alcatra sirloin bacon corned beef beef ribs short loin. Pork belly spare ribs biltong corned beef meatball short ribs tongue alcatra swine drumstick. Biltong shankle kevin, cupim sirloin bresaola brisket. Tail pork belly biltong ball tip tri-tip, pig jerky cow pastrami prosciutto ;ground round bacon capicola tongue meatball.";
 
-var buttonElem = document.getElementById("more");
+/*var buttonElem = document.getElementById("more");
 console.log(buttonElem);
 
 buttonElem.addEventListener("click", moreContent);
@@ -14,15 +14,21 @@ buttonElem.addEventListener("click", moreContent);
 function moreContent(){
 	more.innerHTML = bacon;
 
-}
+} 
+*/
 
+function moreContent(){
+	var pElem = document.getElementById("more");
+	console.log(pElem);
+	pElem.innerHTML = bacon;
+}
 
 //2. HTTP
 /*Create a function named `lessContent` that will initiate the `Show Less` link after clicking on it.
 
 The function will hide the contents in the pargraph with the id of `less` after clicking on the `Show Less` link.*/
 
-
+/*
 function lessContent(){
 	   var x = document.getElementById("less");
     if (x.style.display === "none") {
@@ -33,15 +39,29 @@ function lessContent(){
 
 }
 
+this example is more advanced because of on/off functionality 
+*/
+
+function lessContent(){
+	var paraElem = document.getElementById("less");
+	console.log(paraElem);
+	paraElem.innerHTML = "";
+}
 
 //3. Tacocat, The Original Palindrome King
 /*Create a function named `zoom` that will increase the font size of the paragraph with the id of `biggie` after hovering your mouse over it. Increae the font size to 150%*/
 
-var zoomBiggie = document.getElementById("biggie");
+/*var zoomBiggie = document.getElementById("biggie");
 console.log(zoomBiggie);
 
 function zoom(){
 	zoomBiggie.style.fontSize = "150%";
+}
+*/
+
+function zoom(){
+	var getBiggie = document.getElementById("biggie");
+	getBiggie.style.fontSize = "150%";
 }
 
 
@@ -53,6 +73,7 @@ Next, create a function named valueMenu that will display your favorite items in
 var menuItems = ["cheeseburger", "fries", "caramel frappe"];
 console.log(menuItems);
 
+
 function valueMenu(){
 	for(var i = 0; i < menuItems.length; i++){
 		console.log(menuItems[i]);
@@ -63,14 +84,25 @@ function valueMenu(){
 }
 
 
+
 //5. Gin.
 /*Create a function named redFace that will change the paragraph text to red and a font size of 20px after clicking on the text.*/
 
+/*
 function redFace(){
-	document.getElementById("drink").style.fontSize = "20px";
-	document.getElementById("drink").style.backgroundColor = "red";
+	document.getElementById("drink").style.fontSize = "30px";
+	document.getElementById("drink").style.color = "red";
 }
+*/
 
+function redFace(){
+	var tonic = document.getElementById("drink");
+	if(tonic.style.color === "black" && tonic.style.fontSize === "20px"){
+		tonic.style.color = "red"; tonic.style.fontSize = "40px";
+	}else{
+		tonic.style.color = "black"; tonic.style.fontSize = "20px";
+	}
+}
 
 //6. Peanut Butter Cup Oreos
 /*Create a function `showPrice` that will add the price of `$5.55` inside the paragraph with the id `price` after hovering your mouse over the paragraph.*/
@@ -102,8 +134,6 @@ function quote(){
 var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
 
 random.addEventListener("click", quotesRndm);
-
-
 
 function quotesRndm(){
 	var randomQuotes = Math.floor(Math.random()*quotes.length);
